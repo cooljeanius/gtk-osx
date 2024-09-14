@@ -24,7 +24,7 @@ skip.append("gst-ffmpeg")
 skip.append("faad")
 
 # Skip everything that is included in our frameworks.
-# 
+#
 skip.append("glib")
 skip.append("pango")
 skip.append("atk")
@@ -59,5 +59,9 @@ environ_prepend("JHB_PREPEND_FRAMEWORKS", "/Library/Frameworks/GLib.framework", 
 environ_prepend("JHB_PREPEND_FRAMEWORKS", "/Library/Frameworks/Cairo.framework", ":")
 environ_prepend("JHB_PREPEND_FRAMEWORKS", "/Library/Frameworks/Gtk.framework", ":")
 environ_prepend("JHB_PREPEND_FRAMEWORKS", "/Library/Frameworks/Libglade.framework", ":")
-environ_prepend("JHB_PREPEND_FRAMEWORKS", "/Library/Frameworks/Loudmouth.framework", ":")
-environ_prepend("JHB_PREPEND_FRAMEWORKS", "/Library/Frameworks/WebKitGtk.framework", ":")
+environ_prepend(
+    "JHB_PREPEND_FRAMEWORKS", "/Library/Frameworks/Loudmouth.framework", ":"
+)
+environ_prepend(
+    "JHB_PREPEND_FRAMEWORKS", "/Library/Frameworks/WebKitGtk.framework", ":"
+)

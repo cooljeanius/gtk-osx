@@ -15,8 +15,8 @@
 # You can set the default setup here.
 #
 # _gtk_osx_default_build = "fw-10.4"
-# 
-# or set things up with an environment variable: 
+#
+# or set things up with an environment variable:
 
 _jhb = os.environ.get("JHB")
 if _jhb is None:
@@ -33,7 +33,7 @@ elif _jhb == "FW":
 # another customization file that is loaded after this one. You can,
 # of course, define your own environment variables for passing in
 # parameters.
- 
+
 # The moduleset can be overridden.
 #
 # moduleset = "gtk-osx"
@@ -46,10 +46,10 @@ elif _jhb == "FW":
 #
 # skip.append("libglade")
 #
-#or put them back:
+# or put them back:
 #
 # if "libglade" in skip:
-#	skip.remove("libglade")
+# 	skip.remove("libglade")
 
 # Set this to True/False if you want to force using or not building
 # and using python as part of jhbuild. If not set, the script will use
@@ -109,9 +109,9 @@ elif _jhb == "FW":
 #
 #  Set up a particular target and SDK: For default operation, set the
 # architecture and SDK for the native machine:
-_target = None;
+_target = None
 if _osx_version.startswith("8"):
-   _target = "10.4"
+    _target = "10.4"
 elif _osx_version.startswith("9"):
     _target = "10.5"
 elif _osx_version.startswith("10"):
@@ -129,7 +129,7 @@ setup_sdk(target=_target, sdk_version="native", architectures=[_default_arch])
 #
 # or a universal build:
 #
-# setup_universal_build(target="10.5", sdk_version="10.5", 
+# setup_universal_build(target="10.5", sdk_version="10.5",
 #                        architectures=["ppc", "i386"])
 
 
@@ -140,7 +140,7 @@ setup_sdk(target=_target, sdk_version="native", architectures=[_default_arch])
 # or simply  add to them:
 #
 # append_autogenargs("libglade", "--enable-static")
-# 
+#
 # Note that in either case the args will be added *after* the args in
 # the module's autogenargs attribute.
 #

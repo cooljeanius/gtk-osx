@@ -12,15 +12,15 @@
 _gtk_osx_prompt_prefix = "*CFW*"
 
 modules = [
-         "meta-gtk-osx-bootstrap",
-         "meta-gtk-osx-core",
-         "meta-gtk-osx-themes",
-         "meta-gtk-osx-gtkmm",
-         "libglade",
-         "loudmouth",
-         #"meta-gstreamer",
-         "WebKit"
-         ]
+    "meta-gtk-osx-bootstrap",
+    "meta-gtk-osx-core",
+    "meta-gtk-osx-themes",
+    "meta-gtk-osx-gtkmm",
+    "libglade",
+    "loudmouth",
+    # "meta-gstreamer",
+    "WebKit",
+]
 
 # Source and installation locations.
 #
