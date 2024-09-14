@@ -24,9 +24,9 @@ if test ! -d "${SOURCE}"; then
     do_exit "The directory ${SOURCE} does not exist, please create it and try again."
 fi
 
-if test -z "${JHBUILD_REVISION}" && test -z "${JHBUILD_REVISION_OPTION}"; then
+if test -z "${JHBUILD_REVISION}" && test -z "${JHBUILD_REVISION_OPTION}" && test -n "${SET_JHBUILD_REVISION}"; then
     JHBUILD_REVISION=$(cat "${SOURCE}"/gtk-osx-build/jhbuild-revision 2>/dev/null)
-    if test "${JHBUILD_REVISION}" = ; then
+    if test "${JHBUILD_REVISION}" = ""; then
         do_exit "Could not find jhbuild revision to use."
     fi
 

@@ -54,7 +54,7 @@ curl -s "${BASEURL}"/jhbuild-revision -o tmp-jhbuild-revision || \
     do_exit "Unable to retrieve stable jhbuild revision"
 JHBUILD_REVISION=$(cat tmp-jhbuild-revision 2>/dev/null)
 if test "${JHBUILD_REVISION}" = ""; then
-    do_exit "Could not find jhbuild revision to use."
+    test -z "${JHBUILD_REVISION}" && do_exit "Could not find jhbuild revision to use."
 fi
 
 JHBUILD_REVISION_OPTION="origin refs/tags/${JHBUILD_REVISION}"
