@@ -1,4 +1,5 @@
 # -*- mode: python -*-
+#!/usr/bin/env python
 
 # All of jhbuild is Python, so there are all sorts of interesting
 # things you can do to customize your build with python commands. This

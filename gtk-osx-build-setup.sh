@@ -53,6 +53,9 @@ rm -f tmp-jhbuild-revision
 curl -s "${BASEURL}"/jhbuild-revision -o tmp-jhbuild-revision || \
     do_exit "Unable to retrieve stable jhbuild revision"
 JHBUILD_REVISION=$(cat tmp-jhbuild-revision 2>/dev/null)
+if test "${JHBUILD_REVISION}" = "" && test -e jhbuild-revision; then
+    test -z "${JHBUILD_REVISION}" && test -r jhbuild-revision && JHBUILD_REVISION=$(cat jhbuild-revision 2>/dev/null)
+fi
 if test "${JHBUILD_REVISION}" = ""; then
     test -z "${JHBUILD_REVISION}" && do_exit "Could not find jhbuild revision to use."
 fi
